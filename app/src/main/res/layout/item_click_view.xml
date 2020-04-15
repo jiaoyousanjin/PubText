@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="115dip"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    android:background="@drawable/touch_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+        android:id="@+id/urgency"
+        android:layout_width="31dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taskadress"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="-74dp"
+        android:layout_toStartOf="@+id/importance"
+        android:background="@drawable/tag_bg"
+        android:backgroundTint="@color/colorRed"
+        android:padding="4dp"
+        android:text="@string/urgent"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/importance"
+        android:layout_width="31dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taskadress"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="-110dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:background="@drawable/tag_bg"
+        android:padding="4dp"
+        android:text="@string/important"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/click_head_img_0" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="85dp"
+        android:layout_height="33dp"
+        android:background="@drawable/touch_bg"
+        android:gravity="center"
+        android:text="去完成"
+        android:textColor="@color/txt_color"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/taskid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:text="id"
+        android:textColor="@android:color/black"
+        android:textSize="10sp"
+        android:textStyle="" />
+
+    <TextView
+        android:id="@+id/taskname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:text="环形表盘"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/taskadress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taskname"
+        android:layout_alignStart="@+id/taskname"
+        android:layout_alignLeft="@+id/taskname"
+        android:layout_marginStart="-1dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="13dp"
+        android:layout_weight="1"
+        android:text="三厂"
+        android:textColor="@color/txt_color"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/taskdate"
+        style="@style/tweetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/taskname"
+        android:layout_alignBottom="@+id/taskname"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/dp_10"
+        android:text="04/06/13" />
+
+</RelativeLayout>
